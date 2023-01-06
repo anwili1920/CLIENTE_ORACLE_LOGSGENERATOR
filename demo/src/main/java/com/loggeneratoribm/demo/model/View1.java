@@ -22,5 +22,5 @@ public class View1 {
     @Column(name = "APELLIDO") 
     private String apellido;
     @Column(name = "MONTO")
-    private BigDecimal  sueldo;
+    private BigDecimal  monto;
 } 

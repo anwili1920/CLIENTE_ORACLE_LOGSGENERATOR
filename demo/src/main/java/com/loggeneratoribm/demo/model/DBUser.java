@@ -1,6 +1,7 @@
 package com.loggeneratoribm.demo.model;
  
-import java.sql.Date;
+
+import java.time.LocalDateTime;
 
  
 import jakarta.persistence.Column;
@@ -12,9 +13,11 @@ import lombok.Setter;
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class DBUser {
     @Column(name ="NOMBREUSUARIO")
-    private String nombre;
+    private String nombreUsuario; 
+
     @Column(name ="ID")
     private long id;
+    
     @Column(name ="FECHA")
-    private Date   fechaCreacion;
+    private LocalDateTime  fecha;
 }
