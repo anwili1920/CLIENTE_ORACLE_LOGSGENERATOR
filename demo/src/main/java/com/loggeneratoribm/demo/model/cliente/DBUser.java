@@ -1,4 +1,4 @@
-package com.loggeneratoribm.demo.model;
+package com.loggeneratoribm.demo.model.cliente;
  
 
 import java.time.LocalDateTime;

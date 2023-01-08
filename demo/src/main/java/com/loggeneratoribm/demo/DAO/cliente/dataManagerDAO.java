@@ -1,10 +1,10 @@
-package com.loggeneratoribm.demo.DAO;
+package com.loggeneratoribm.demo.DAO.cliente;
 
 import java.util.List;
 
-import com.loggeneratoribm.demo.model.DBConnection;
-import com.loggeneratoribm.demo.model.DBProcedure;
-import com.loggeneratoribm.demo.model.DBUser;
+import com.loggeneratoribm.demo.model.cliente.DBConnection;
+import com.loggeneratoribm.demo.model.cliente.DBProcedure;
+import com.loggeneratoribm.demo.model.cliente.DBUser;
 
 public interface dataManagerDAO {
     public List<DBUser> ListALLDBUsers();

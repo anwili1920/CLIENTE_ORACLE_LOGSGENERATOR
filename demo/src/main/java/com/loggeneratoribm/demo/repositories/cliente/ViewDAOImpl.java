@@ -1,4 +1,4 @@
-package com.loggeneratoribm.demo.API;
+package com.loggeneratoribm.demo.repositories.cliente;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.loggeneratoribm.demo.DAO.ViewDAO;
-import com.loggeneratoribm.demo.model.View1;
+import com.loggeneratoribm.demo.DAO.cliente.ViewDAO;
+import com.loggeneratoribm.demo.model.cliente.View1;
 
 
 @Repository
