@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
-public class empresa {
+public class Empresa {
     @Column(name ="RUC")
     private Integer ruc;
 

@@ -1,9 +1,9 @@
 package com.loggeneratoribm.demo.dao.tamara;
 
-import com.loggeneratoribm.demo.model.tamara.currentUser;
-import com.loggeneratoribm.demo.model.tamara.empresa;
+import com.loggeneratoribm.demo.model.tamara.CurrentUser;
+import com.loggeneratoribm.demo.model.tamara.Empresa;
 
 public interface TamaraDAO {
-    public String insertEmpresa(empresa e);
-    public currentUser getCurrentUser();
+    public String insertEmpresa(Empresa e);
+    public CurrentUser getCurrentUser();
 }

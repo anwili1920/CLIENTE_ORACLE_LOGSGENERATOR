@@ -13,7 +13,7 @@ import com.loggeneratoribm.demo.model.cliente.DBProcedure;
 import com.loggeneratoribm.demo.model.cliente.DBUser;
 
 @Repository
-public class dataManagerImpl implements DataManagerDAO{
+public class DataManagerImpl implements DataManagerDAO{
     @Autowired
     JdbcTemplate template;
     @Override
@@ -47,8 +47,6 @@ public class dataManagerImpl implements DataManagerDAO{
 
     @Override
     public void DesconnectUser() {
-        // TODO Auto-generated method stub
-        
     }
     
 }

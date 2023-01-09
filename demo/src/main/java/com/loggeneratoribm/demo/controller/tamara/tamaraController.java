@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.loggeneratoribm.demo.dao.tamara.TamaraDAO;
-import com.loggeneratoribm.demo.model.tamara.currentUser;
-import com.loggeneratoribm.demo.model.tamara.empresa; 
+import com.loggeneratoribm.demo.model.tamara.CurrentUser;
+import com.loggeneratoribm.demo.model.tamara.Empresa; 
 
 @RestController
-public class tamaraController {
+public class TamaraController {
     @Autowired
     private TamaraDAO tamaraDAO;
     @PostMapping("/ingresarempresa")
-    public String setNuevaEmpresa(@RequestBody empresa emp){
+    public String setNuevaEmpresa(@RequestBody Empresa emp){
         return tamaraDAO.insertEmpresa(emp);
     }
     @GetMapping("/usuarioActual")
-	public currentUser getUsuarioActual( ) {
+	public CurrentUser getUsuarioActual( ) {
 		return tamaraDAO.getCurrentUser();
 	}
 }

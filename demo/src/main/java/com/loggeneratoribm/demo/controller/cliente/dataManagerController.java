@@ -13,10 +13,10 @@ import com.loggeneratoribm.demo.dao.cliente.DataManagerDAO;
 import com.loggeneratoribm.demo.model.cliente.DBConnection;
 import com.loggeneratoribm.demo.model.cliente.DBProcedure;
 import com.loggeneratoribm.demo.model.cliente.DBUser;
-import com.loggeneratoribm.demo.model.cliente.newUser;
+import com.loggeneratoribm.demo.model.cliente.NewUser;
 
 @RestController
-public class dataManagerController{
+public class DataManagerController{
 
     @Autowired
     private DataManagerDAO dataManagerDAO;
@@ -34,7 +34,7 @@ public class dataManagerController{
 		return dataManagerDAO.ListALLSchemaProcedure(schemaName);
 	}
     @PostMapping("/dbnuevoUsuario")
-    public DBUser setNewUser(@RequestBody newUser usuarionuevo){
+    public DBUser setNewUser(@RequestBody NewUser usuarionuevo){
         return dataManagerDAO.CreateUser( usuarionuevo.getUsername(),usuarionuevo.getPassword());
     }
 

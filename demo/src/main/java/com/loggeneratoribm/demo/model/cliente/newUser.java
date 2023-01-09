@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
-public class newUser {
+public class NewUser {
     private String username;
     private String password;
 }

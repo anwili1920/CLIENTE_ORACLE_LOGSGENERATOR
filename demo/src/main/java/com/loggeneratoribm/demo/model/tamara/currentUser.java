@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
-public class currentUser {
+public class CurrentUser {
     @Column(name ="USUARIO")
     private String usuario;  
 }

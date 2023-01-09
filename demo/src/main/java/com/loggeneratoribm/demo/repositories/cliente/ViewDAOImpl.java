@@ -17,7 +17,7 @@ public class ViewDAOImpl implements ViewDAO{
     JdbcTemplate template;
     @Override
     public List<View1> findAll() {
-        // TODO Auto-generated method stub
+         
         String query="SELECT empleado.Id_Empleado , contrato.Numero_Contrato,persona.Nombre1 AS NOMBRE, persona.Apellido1 AS APELLIDO ,sueldos.Monto AS MONTO "+
         "from CLIENTE_DB.Empleado empleado, CLIENTE_DB.Sueldos sueldos, CLIENTE_DB.Persona  persona, CLIENTE_DB.Contrato  contrato "+
         "WHERE persona.Id_Persona=empleado.Fid_Persona AND sueldos.Fid_Contrato=contrato.Id_Contrato AND empleado.Fid_Contrato=contrato.Id_Contrato AND contrato.Id_Contrato=sueldos.Fid_Contrato "+
@@ -29,7 +29,6 @@ public class ViewDAOImpl implements ViewDAO{
 
     @Override
     public List<View1> findbyNameorLastName(String word) {
-        // TODO Auto-generated method stub
         return null;
     }
 }
