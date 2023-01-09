@@ -7,13 +7,13 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.loggeneratoribm.demo.DAO.cliente.dataManagerDAO;
+import com.loggeneratoribm.demo.dao.cliente.DataManagerDAO;
 import com.loggeneratoribm.demo.model.cliente.DBConnection;
 import com.loggeneratoribm.demo.model.cliente.DBProcedure;
 import com.loggeneratoribm.demo.model.cliente.DBUser;
 
 @Repository
-public class dataManagerImpl implements dataManagerDAO{
+public class dataManagerImpl implements DataManagerDAO{
     @Autowired
     JdbcTemplate template;
     @Override

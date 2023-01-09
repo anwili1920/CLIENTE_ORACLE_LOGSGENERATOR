@@ -3,18 +3,14 @@ package com.loggeneratoribm.demo.config;
  
 import javax.sql.DataSource;
 
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 
 
 import org.springframework.context.annotation.Configuration;
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -45,14 +41,14 @@ public class TamaraDBConfig {
         return new DataSourceProperties();
     } 
     @Bean(name="tamaraDatasource")
-    @ConfigurationProperties(prefix = "spring.datasource")
+    @ConfigurationProperties(prefix = "tamara.datasource")
     public DataSource datasource(@Qualifier("tamaraProps") DataSourceProperties properties){
-        return  properties.initializeDataSourceBuilder().build();
+        return properties.initializeDataSourceBuilder().build();
     }
     @Bean(name="tamaraEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(EntityManagerFactoryBuilder builder,@Qualifier("tamaraDatasource") DataSource dataSource){
         return builder
-                .dataSource(  dataSource)
+                .dataSource( dataSource)
                 .packages("com.loggeneratoribm.demo.model.tamara")
                 .persistenceUnit("orcl").build();
     } 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.loggeneratoribm.demo.DAO.cliente.dataManagerDAO;
+import com.loggeneratoribm.demo.dao.cliente.DataManagerDAO;
 import com.loggeneratoribm.demo.model.cliente.DBConnection;
 import com.loggeneratoribm.demo.model.cliente.DBProcedure;
 import com.loggeneratoribm.demo.model.cliente.DBUser;
@@ -19,23 +19,23 @@ import com.loggeneratoribm.demo.model.cliente.newUser;
 public class dataManagerController{
 
     @Autowired
-    private dataManagerDAO queries;
+    private DataManagerDAO dataManagerDAO;
     
     @GetMapping("/dbusuarios") 
     public List<DBUser> getDBUSERS() {  
-        return queries.ListALLDBUsers();
+        return dataManagerDAO.ListALLDBUsers();
     }
     @GetMapping("/dbconexiones")
     public List<DBConnection> getConnections(){
-        return queries.ListALLConnections();
+        return dataManagerDAO.ListALLConnections();
     }
     @GetMapping("/dbproceduresxschema/{schemaName}")
 	public List<DBProcedure> getProcedures(@PathVariable String schemaName) {
-		return queries.ListALLSchemaProcedure(schemaName);
+		return dataManagerDAO.ListALLSchemaProcedure(schemaName);
 	}
     @PostMapping("/dbnuevoUsuario")
     public DBUser setNewUser(@RequestBody newUser usuarionuevo){
-        return queries.CreateUser( usuarionuevo.getUsername(),usuarionuevo.getPassword());
+        return dataManagerDAO.CreateUser( usuarionuevo.getUsername(),usuarionuevo.getPassword());
     }
 
 }

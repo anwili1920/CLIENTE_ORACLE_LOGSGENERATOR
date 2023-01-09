@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.loggeneratoribm.demo.DAO.cliente.ViewDAO;
+import com.loggeneratoribm.demo.dao.cliente.ViewDAO;
 import com.loggeneratoribm.demo.model.cliente.View1;
 
   

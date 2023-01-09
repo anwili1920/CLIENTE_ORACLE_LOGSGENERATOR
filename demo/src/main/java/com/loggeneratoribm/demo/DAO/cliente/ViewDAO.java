@@ -1,4 +1,4 @@
-package com.loggeneratoribm.demo.DAO.cliente;
+package com.loggeneratoribm.demo.dao.cliente;
 
 import java.util.List;
 

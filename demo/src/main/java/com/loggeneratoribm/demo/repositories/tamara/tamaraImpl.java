@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.loggeneratoribm.demo.DAO.tamara.tamaraDAO;
+import com.loggeneratoribm.demo.dao.tamara.TamaraDAO;
 import com.loggeneratoribm.demo.model.tamara.currentUser;
 import com.loggeneratoribm.demo.model.tamara.empresa;
 @Repository
-public class tamaraImpl implements tamaraDAO{
+public class tamaraImpl implements TamaraDAO{
     @Autowired
     JdbcTemplate template;
     @Override
@@ -20,6 +20,7 @@ public class tamaraImpl implements tamaraDAO{
     }
     @Override
     public currentUser getCurrentUser() {
+        
         String query="select USER AS USUARIO from dual";
         return template.queryForObject(query, currentUser.class);
     }

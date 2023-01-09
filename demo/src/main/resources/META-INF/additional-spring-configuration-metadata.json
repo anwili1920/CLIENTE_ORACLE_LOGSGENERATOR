@@ -8,5 +8,15 @@
     "name": "tamara.datasource.username",
     "type": "java.lang.String",
     "description": "A description for 'tamara.datasource.username'"
+  },
+  {
+    "name": "tamara.datasource.password",
+    "type": "java.lang.String",
+    "description": "A description for 'tamara.datasource.password'"
+  },
+{
+    "name": "tamara.datasource.url",
+    "type": "java.lang.String",
+    "description": "A description for 'tamara.datasource.url'"
   }
 ]}
