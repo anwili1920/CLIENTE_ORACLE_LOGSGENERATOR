@@ -7,7 +7,7 @@ import com.loggeneratoribm.demo.model.cliente.DBProcedure;
 import com.loggeneratoribm.demo.model.cliente.DBUser;
 
 public interface DataManagerDAO {
-    public List<DBUser> ListALLDBUsers();
+    public List<DBUser> listALLDBUsers();
     public  DBUser CreateUser(String username,String password);
     public  List<DBProcedure>ListALLSchemaProcedure(String schemaName);
     public List<DBConnection> ListALLConnections();

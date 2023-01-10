@@ -1,16 +1,24 @@
 package com.loggeneratoribm.demo.model.tamara;
-import jakarta.persistence.Column;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class Empresa {
-    @Column(name ="RUC")
-    private Integer ruc;
+	private Integer	ruc;
 
-    @Column(name ="NOMBRE")
-    private String nombre;  
+	private String	nombre;
+
+	public Integer getRuc() {
+		return ruc;
+	}
+
+	public void setRuc(Integer ruc) {
+		this.ruc = ruc;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
 }

@@ -23,7 +23,7 @@ public class DataManagerController{
     
     @GetMapping("/dbusuarios") 
     public List<DBUser> getDBUSERS() {  
-        return dataManagerDAO.ListALLDBUsers();
+        return dataManagerDAO.listALLDBUsers();
     }
     @GetMapping("/dbconexiones")
     public List<DBConnection> getConnections(){

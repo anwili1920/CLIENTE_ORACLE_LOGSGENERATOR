@@ -1,22 +1,51 @@
 package com.loggeneratoribm.demo.model.cliente;
+
 import java.time.LocalDateTime;
 
-import jakarta.persistence.Column;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class DBConnection {
-    @Column(name="USUARIO")
-    private String usuario;
-    @Column(name = "SID")
-    private Integer sid;
-    @Column(name = "SERIAL")
-    private Long serial;
-    @Column(name = "HORACONEXION")
-    private LocalDateTime horaConexion;
-    @Column(name = "ESTATUS")
-    private String estatus;
+	private String			usuario;
+	private Integer			sid;
+	private Long			serial;
+	private LocalDateTime	horaConexion;
+	private String			estatus;
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public Integer getSid() {
+		return sid;
+	}
+
+	public void setSid(Integer sid) {
+		this.sid = sid;
+	}
+
+	public Long getSerial() {
+		return serial;
+	}
+
+	public void setSerial(Long serial) {
+		this.serial = serial;
+	}
+
+	public LocalDateTime getHoraConexion() {
+		return horaConexion;
+	}
+
+	public void setHoraConexion(LocalDateTime horaConexion) {
+		this.horaConexion = horaConexion;
+	}
+
+	public String getEstatus() {
+		return estatus;
+	}
+
+	public void setEstatus(String estatus) {
+		this.estatus = estatus;
+	}
 }
