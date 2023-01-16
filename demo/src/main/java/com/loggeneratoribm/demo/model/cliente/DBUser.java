@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 
 public class DBUser {
     private String nombreUsuario; 
-
     private long id;
     
     private LocalDateTime  fecha;

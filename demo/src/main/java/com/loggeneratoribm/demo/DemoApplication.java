@@ -9,9 +9,9 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context =SpringApplication.run(DemoApplication.class, args);
-		for(String bean:context.getBeanDefinitionNames()) {
-			System.out.println(bean);
-		}
+		// for(String bean:context.getBeanDefinitionNames()) {
+		// 	System.out.println(bean);
+		// }
 	}
 
 }

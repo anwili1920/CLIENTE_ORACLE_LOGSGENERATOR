@@ -2,7 +2,6 @@ package com.loggeneratoribm.demo.model.tamara;
 
 public class Empresa {
 	private Integer	ruc;
-
 	private String	nombre;
 
 	public Integer getRuc() {
