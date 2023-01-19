@@ -15,7 +15,7 @@ import com.loggeneratoribm.demo.model.database.NameView;
 import com.loggeneratoribm.demo.model.database.View1;
 
 @Service
-public class DataAnalystDAOImpl implements DataAnalystDAO {
+public class DataAnalystImpl implements DataAnalystDAO {
 	 
 	JdbcTemplate template;
 

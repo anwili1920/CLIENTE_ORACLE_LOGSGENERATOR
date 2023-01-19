@@ -13,6 +13,7 @@ import com.loggeneratoribm.demo.backendDeveloper.dao.BackEndDAO;
 import com.loggeneratoribm.demo.dataAnalystScientist.dao.DataAnalystDAO;
 import com.loggeneratoribm.demo.dataBaseManager.dao.DataManagerDAO;
 import com.loggeneratoribm.demo.dataBaseManager.dao.LoginDAO;
+import com.loggeneratoribm.demo.hacker.dao.HackerDAO;
 import com.loggeneratoribm.demo.model.backend.Cliente;
 import com.loggeneratoribm.demo.model.backend.CurrentUser;
 import com.loggeneratoribm.demo.model.backend.Empresa;
@@ -39,7 +40,8 @@ public class LoginController {
     private DataAnalystDAO dataAnalystDAO;
     @Autowired
     private BackEndPracticanteDAO backendPracticanteDAO;
-    
+    @Autowired
+    private HackerDAO hackerDAO;
     @GetMapping("/iniciarSesionUsuario") 
     public String setNewSession(@RequestBody DBConfig usuario) {
         loginDAO.beginSession(usuario);
@@ -120,5 +122,8 @@ public class LoginController {
         dataAnalystDAO.setTemplate(loginDAO.getLogin().getTemplate());
         return dataAnalystDAO.selectAllViews(owner);
     }
-
+    @GetMapping("/hacker/fuerzabruta")
+    public String loggeoFuerzabruta(@RequestBody DBConfig user){ 
+        return "Se intentó ingresar "+hackerDAO.forcebruteloggin(user)+" veces";
+    }
 }
