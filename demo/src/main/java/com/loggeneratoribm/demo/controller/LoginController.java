@@ -42,7 +42,7 @@ public class LoginController {
     private BackEndPracticanteDAO backendPracticanteDAO;
     @Autowired
     private HackerDAO hackerDAO;
-    @GetMapping("/iniciarSesionUsuario") 
+    @PostMapping("/iniciarSesionUsuario") 
     public String setNewSession(@RequestBody DBConfig usuario) {
         loginDAO.beginSession(usuario);
         String current_user = loginDAO.getLogin().getCurrentUserDBName();
