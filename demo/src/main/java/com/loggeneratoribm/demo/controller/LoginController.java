@@ -65,7 +65,7 @@ public class LoginController {
 		return backendDAO.listarClientes();
 	}
 
-    @GetMapping("/practicante/multiselect")
+    @PostMapping("/practicante/multiselect")
     public List<String> multiseleccionar(@RequestBody NameRequest owner ){
         backendPracticanteDAO.setTemplate(loginDAO.getLogin().getTemplate());
         return backendPracticanteDAO.multipleSelect(owner);
@@ -117,7 +117,7 @@ public class LoginController {
         dataAnalystDAO.setTemplate(loginDAO.getLogin().getTemplate());
 		return dataAnalystDAO.findbyNameorLastName(palabra);
 	} 
-    @GetMapping("/dbanalyst/multiviews")
+    @PostMapping("/dbanalyst/multiviews")
     public List<String> multiseleccionarviews(@RequestBody NameRequest owner ){
         dataAnalystDAO.setTemplate(loginDAO.getLogin().getTemplate());
         return dataAnalystDAO.selectAllViews(owner);

@@ -1,17 +1,12 @@
 package com.loggeneratoribm.demo.dataBaseManager.repositories;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.loggeneratoribm.demo.config.NewSession;
 import com.loggeneratoribm.demo.dataBaseManager.dao.LoginDAO;
 import com.loggeneratoribm.demo.model.database.DBConfig;
-import com.loggeneratoribm.demo.model.database.User;
 import com.loggeneratoribm.demo.services.Login; 
 
 
